@@ -2,7 +2,7 @@ import pygame
 import random
 import time
 pygame.init()
-window_size = (1000, 1010)
+window_size = (500, 510)
 r = window_size[0]/25
 d = 0.375*r
 screen = pygame.display.set_mode(window_size)
@@ -13,7 +13,7 @@ bg_color = (0, 0, 0)
 pclr = (255, 255, 255)
 player_size = (20, 20)
 player_pos = [0, 0]
-player_speed = window_size[0]/1500
+player_speed = window_size[0]/750
 game_over = False
 running = True
 
@@ -38,7 +38,7 @@ def eat(a, b, c, d):
     sides = 3
     if (z <= r and (not checkInside(polygon, sides, p))):
         k += 1
-    print(checkInside(polygon, sides, p))
+    # print(checkInside(polygon, sides, p))
 
 
 white = (255, 255, 255)
@@ -47,8 +47,7 @@ blue = (0, 0, 128)
 
 
 def genc():
-    x, y = random.randint(
-        r, window_size[0]-r), random.randint(r, window_size[0]-r)
+    x, y = random.randint(r, window_size[0]-r), random.randint(r, window_size[0]-r)
 
     return x, y
 
